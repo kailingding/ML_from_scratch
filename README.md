@@ -1,6 +1,6 @@
 # Machine Learning from scratch
 
-#### NumPy implementation of machine learning models from scratch for accessibility. Aim to cover from linear models to neural networks.
+#### NumPy implementation of machine learning models from scratch for accessibility. Aim to cover from linear models to neural networks. 🚀
 
 ## Installation
 <pre><code>

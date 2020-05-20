@@ -4,8 +4,8 @@
 
 ## Installation
 <pre><code>
-$ git clone https://github.com/kailingding/ML_from_scratch <br />
-$ cd ML_from_scratch <br />
+$ git clone https://github.com/kailingding/ML_from_scratch 
+$ cd ML_from_scratch 
 $ python setup.py install
 </code></pre>
 

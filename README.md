@@ -1,15 +1,22 @@
-# ML_from_scratch
+# Machine Learning from scratch
 
-Implementation of machine learning model from scratch for accessibility.
+NumPy implementation of machine learning model from scratch for accessibility.
 
-# Table of Content
-1. Supervised Learning
-	1. Linear model
-	2. Logistic model (WIP)
-	3. Naive Bayes
-	4. Decision Tree
-	5. Random Forest 
-2. Unsupervised Learning
-	1. K-means (WIP)
-3. Reinforccement Learning (WIP)
-4. Deep Learning (WIP)
+## Installation
+<pre><code>
+$ git clone https://github.com/kailingding/ML_from_scratch <br />
+$ cd ML_from_scratch <br />
+$ python setup.py install
+</code></pre>
+
+## Table of Content
+- [Supervised Learning](https://github.com/kailingding/ML_from_scratch/tree/master/ml_from_scratch/supervised_learning)
+	- [Linear model](https://github.com/kailingding/ML_from_scratch/blob/master/ml_from_scratch/supervised_learning/linear_regression.py)
+	- Logistic model (WIP)
+	- [Naive Bayes](https://github.com/kailingding/ML_from_scratch/blob/master/ml_from_scratch/supervised_learning/naive_bayes.py)
+	- [Decision Tree](https://github.com/kailingding/ML_from_scratch/blob/master/ml_from_scratch/supervised_learning/decision_tree.py)
+	- [Random Forest](https://github.com/kailingding/ML_from_scratch/blob/master/ml_from_scratch/supervised_learning/random_forest.py) 
+- Unsupervised Learning
+	- K-means (WIP)
+- Reinforccement Learning (WIP)
+- Deep Learning (WIP)

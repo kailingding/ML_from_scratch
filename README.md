@@ -3,6 +3,7 @@
 #### NumPy implementation of machine learning models from scratch for accessibility. Aim to cover from linear models to neural networks. 🚀
 
 ## Installation
+
 <pre><code>
 $ git clone https://github.com/kailingding/ML_from_scratch 
 $ cd ML_from_scratch 

@@ -1,4 +1,4 @@
-# Machine Learning from scratch
+# Machine Learning From Scratch
 
 #### NumPy implementation of machine learning models from scratch for accessibility. Aim to cover from linear models to neural networks. 🚀
 

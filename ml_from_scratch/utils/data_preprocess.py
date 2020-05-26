@@ -12,23 +12,29 @@ def min_max_normalize(lst):
         toreturn.append((lst[i] - minimum) / (maximum - minimum))
     return toreturn
 
-
-def z_standardize(lst, mean=True, std=True):
+def z_standardize(X_inp):
     """
         Z-score Standardization.
+        Standardize the feature matrix, and store the standarize rule.
     """
-    mean = 0
-    std = 1
-    if mean:
-        mean = np.mean(lst)
-    if std:
-        std = np.std(lst)
-
-    return [(x - mean) / std for x in lst]
+    toreturn = X_inp.copy()
+    for i in range(X_inp.shape[1]):
+        std = np.std(X_inp[:, i])  # ------ Find the standard deviation of the feature
+        mean = np.mean(X_inp[:, i])  # ------ Find the mean value of the feature
+        temp = []
+        for j in np.array(X_inp[:, i]):
+            temp += [(j - mean) / std]
+        toreturn[:, i] = temp
+    return toreturn
 
 
 def sigmoid(x):
-    """ 
+    """
         Sigmoid Function
     """
     return 1 / (1 + np.exp(-x))
+
+
+if __name__ == "__main__":
+    print(1)
+    print(__package__)

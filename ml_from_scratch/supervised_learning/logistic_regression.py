@@ -1,13 +1,16 @@
 import numpy as np
 import pandas as pd
+
 from ml_from_scratch.utils.data_preprocess import sigmoid, z_standardize
 
-
 class Logistic_Regression:
-    def __init__(self):
-        self.is_standardized = False
+    def __init__(self, alpha, num_iter, early_stop=0, standardized=True):
+        self.alpha = alpha
+        self.num_iter = num_iter
+        self.early_stop = early_stop
+        self.standardized = standardized
         self.theta, self.b = 0, 0
-        self.X, self.y = None, None
+        self.X, self.y = None, Nbone
 
     def fit(self, X_train, y_train):
         """
@@ -34,6 +37,9 @@ class Logistic_Regression:
         self.theta = np.random.normal(-1 / self.m ** .5, 1 / self.m ** .5, size=self.m)
         self.b = 0
 
+        # train model (find best coef)
+        _, _ = self.gradient_descent_logistic(self.alpha, self.num_iter,
+                self.early_stop, self.standardized)
 
     def gradient(self, X_inp, y_inp, theta, b):
         """
@@ -41,7 +47,7 @@ class Logistic_Regression:
 
             Parameter:
                 X_inp: Matrix or 2-D array. Input feature matrix.
-                y_inp: Matrix or 2-D array. Input target value.
+                y_inp: Matrix or 2-D array. Input target vpalue.
                 theta: Matrix or 1-D array. Weight matrix.
                 b: int. Bias.
 
@@ -58,7 +64,7 @@ class Logistic_Regression:
         return grad_theta, grad_b
 
     def gradient_descent_logistic(
-        self, alpha, num_pass, early_stop=0, standardized=True
+            self, alpha, num_pass, early_stop=0, standardized=True
     ):
         """
             Logistic Regression with gradient descent method
@@ -78,8 +84,8 @@ class Logistic_Regression:
         """
 
         if standardized:
-            self.X = z_standardize(self.X)
-            self.is_standardized = True
+            self.X = np.array([z_standardize(x) for x in self.X.T]).T
+            self.standardized = True
 
         for i in range(num_pass):
             # update gradients
@@ -96,7 +102,7 @@ class Logistic_Regression:
                            np.dot((1 - self.y), np.log(temp_y_hat)))
 
             if (abs(pre_error - temp_error) < early_stop) | (
-                abs(abs(pre_error - temp_error) / pre_error) < early_stop
+                    abs(abs(pre_error - temp_error) / pre_error) < early_stop
             ):
                 return temp_theta, temp_b
 
@@ -120,8 +126,8 @@ class Logistic_Regression:
                 p: prediction of given data matrix
         """
         # Use predict_ind to generate the prediction list
-        if self.is_standardized:
-            X = z_standardize(X)
+        if self.standardized:
+            X = np.array([z_standardize(x) for x in X.T]).T
 
         ret = [self.predict_ind(x) for x in X]
 

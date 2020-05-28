@@ -26,7 +26,7 @@ $ python setup.py install
 - Reinforccement Learning (WIP)
 	- Deep Q-Network (WIP)
 - Deep Learning (WIP)
-	- Activation Function (WIP)
+	- [Activation Function](https://github.com/kailingding/ML_from_scratch/blob/master/ml_from_scratch/deep_learning/activation_function.py)
 	- Loss Function (WIP)
 	- Layers (WIP)
 		- CNN (WIP)

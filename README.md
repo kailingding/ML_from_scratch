@@ -2,6 +2,8 @@
 
 #### NumPy implementation of machine learning models from scratch for accessibility. Aim to cover from linear models to neural networks. 🚀
 
+Hopefully you can find the content helpful in your fantastic ML / DL journey.
+
 ## Installation
 
 <pre><code>

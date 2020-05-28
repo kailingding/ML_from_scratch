@@ -15,6 +15,7 @@ setup(
     name='ml_from_scratch',
     description='Implementation of machine learning models from scratch',
     url='https://github.com/kailingding/ML_from_scratch',
+    version="0.1.0",
     license='MIT',
     packages=find_packages(),
     include_package_data=True,

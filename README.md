@@ -27,7 +27,7 @@ $ python setup.py install
 	- Deep Q-Network (WIP)
 - Deep Learning (WIP)
 	- [Activation Function](https://github.com/kailingding/ML_from_scratch/blob/master/ml_from_scratch/deep_learning/activation_function.py)
-	- Loss Function (WIP)
+	- [Loss Function](https://github.com/kailingding/ML_from_scratch/blob/master/ml_from_scratch/deep_learning/loss_function.py)
 	- Layers (WIP)
 		- CNN (WIP)
 		- RNN (WIP)

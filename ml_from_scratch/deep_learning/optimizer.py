@@ -42,3 +42,11 @@ class Adagrad:
 
 	def step(self):
 		pass
+
+
+class Adam:
+	def __init__(self):
+		pass
+
+	def step(self):
+		pass
